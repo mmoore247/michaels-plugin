@@ -28,6 +28,6 @@ register_uninstall_hook( __FILE__, 'plugin_uninstall' );
 function plugin_uninstall () {
 	$all_user_ids = get_users( 'fields=ID' );
 	foreach ( $all_user_ids as $user_id ) {
-    delete_user_meta( $user_id, 'mm_michaels_notice_dismissed' );
+	delete_user_meta( $user_id, 'mm_mp_dismiss_notice' );
 }
 }
